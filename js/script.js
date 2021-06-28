@@ -83,5 +83,64 @@ function FunPreencheTabela(par_text)
 }
 
 const array_linguagem_web = document.querySelectorAll('[name="linguagem_web"]')
-const obj_troca_imagem = document.querySelector('#troca_imagem')
 const obj_img_troca_imagem = document.querySelector('#img_troca_imagem')
+const obj_p_linguagem_prog = document.querySelector('#p_linguagem_prog')
+
+for (obj_linguagem_web of array_linguagem_web)
+{
+
+    obj_linguagem_web.addEventListener('click', FunMudaImgLingProg)
+
+}
+
+function FunMudaImgLingProg()
+{
+
+    for (obj_linguagem_web of array_linguagem_web)
+    {
+        if (obj_linguagem_web.checked)
+        {
+            obj_img_troca_imagem.setAttribute('src', 'img/' + obj_linguagem_web.value + '.png')
+            obj_img_troca_imagem.setAttribute('alt', 'Logo ' + obj_linguagem_web.value)
+            obj_img_troca_imagem.setAttribute('title', 'Logo ' + obj_linguagem_web.value)
+            obj_p_linguagem_prog.innerText = 'Linguagem ' + obj_linguagem_web.value
+        }
+
+    }
+}
+
+
+const array_lista_principal = document.querySelectorAll('#lista_principal li')
+const obj_lista_vazia = document.querySelector('#lista_vazia')
+const obj_prog_lista_vazia = document.querySelector('#prog_lista_vazia')
+
+let contador_linhas_lista_nova = 0
+
+for (obj_li of array_lista_principal)
+{
+
+    obj_li.addEventListener('click', function() { FunPreencheLista(this.innerText)} )
+
+}
+
+function FunPreencheLista(par_text)
+{
+
+    if (contador_linhas_lista_nova < 6)
+    {
+
+        const obj_li_novo = document.createElement('li')
+        obj_li_novo.innerText = par_text
+        obj_lista_vazia.appendChild(obj_li_novo)
+        contador_linhas_lista_nova++
+        obj_prog_lista_vazia.value = contador_linhas_lista_nova
+
+    }
+    else
+    {
+
+        alert('Tabela cheia!')
+
+    }
+
+}
