@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="img/JavaScript.png">
+    <title>Atividade JavaScript</title>
+</head>
+<body>
+    <header>
+        Funcionalidades JavaScript
+    </header>
+    <main>
+        <div class="container superior">
+            <div>
+                <select id="sel_rede_social">
+                    <option value="" selected disabled>Escolha uma Rede Social...</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Linkedin">Linkedin</option>
+                    <option value="Twitter">Twitter</option>
+                </select>
+            </div>
+            <div>
+                <img src="img/social-media.png" id="img_rede_social" alt="Redes Sociais">
+                <p id="p_rede_social">Redes Sociais</p>
+            </div>
+            <div>
+                Clique em uma figura:
+                <br>
+                <img src="img/Facebook.png" class="figuras" alt="Logo Facebook">
+                <img src="img/Instagram.png" class="figuras" alt="Logo Instagram">
+                <img src="img/Linkedin.png" class="figuras" alt="Logo Linkedin">
+                <img src="img/Twitter.png" class="figuras" alt="Logo Twitter">
+            </div>
+            <div id="div_adiciona_figura">
+
+            </div>
+            <div>
+                <table id="tab_principal">
+                    <caption>
+                        Tabela Principal
+                    </caption>
+                    <tr>
+                        <td>Facebook</td>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>Linkedin</td>
+                    </tr>
+                    <tr>
+                        <td>Twitter</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table id="tab_vazio">
+                    <caption>
+                        Tabela Vazia
+                    </caption>
+                </table>
+                <progress id="prog_tab_vazia" max="5" value="0"></progress>
+            </div>
+        </div>
+        <div class="container inferior">
+            <div>
+                Selecione uma Linguagem Web:
+                <br>
+                <input type="radio" name="linguagem_web" value="CSS">
+                CSS
+                <br>
+                <input type="radio" name="linguagem_web" value="HTML">
+                HTML
+                <br>
+                <input type="radio" name="linguagem_web" value="JavaScript">
+                JavaScript
+            </div>
+            <div id="troca_imagem">
+                <img src="img/code.png" id="img_troca_imagem" alt="Linguagens de Programação Web">
+                <p>Programação Web</p>
+            </div>
+            <div>
+                <p>Lista Principal</p>
+                <ul id="lista_principal">
+                    <li>CSS</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div>
+                <p>Lista Vazia</p>
+                <ul id="lista_vazia">
+
+                </ul>
+                <progress max="6" value="0"></progress>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
